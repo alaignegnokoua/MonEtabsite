@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+
+    <link rel="stylesheet" th:href="@{style.css}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professeurs</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- Conteneur principal -->
+<div class="container">
+    <!-- Barre latérale -->
+    <div class="sidebar">
+        <h1>Mon ETAB</h1>
+        <ul>
+            <li><a th:href="@{eleve}"><i class="fas fa-user"></i> Élèves</a></li>
+            <li><a th:href="@{professeur}"><i class="fas fa-chalkboard-teacher"></i> Professeurs</a></li>
+            <li><a th:href="@{utilisateur}"><i class="fas fa-users"></i> Utilisateurs</a></li>
+            <li><a th:href="@{rapport}"><i class="fas fa-chart-line"></i> Rapport</a></li>
+        </ul>
+        <a href="#" class="logout">Déconnexion</a>
+    </div>
+
+    <!-- Contenu principal -->
+    <div class="main-content">
+        <h2 class="title">Professeurs</h2>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Genre</th>
+                <th>Vacant</th>
+                <th>Matricule</th>
+                <th>Âge</th>
+                <th>Téléphone</th>
+                <th>Ville</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Doe</td>
+                <td>John</td>
+                <td>Homme</td>
+                <td>Non</td>
+                <td>12345</td>
+                <td>40</td>
+                <td>0123456789</td>
+                <td>Abidjan</td>
+                <td><button class="edit">Modifier</button> <button class="delete">Supprimer</button></td>
+            </tr>
+            <tr>
+                <td>Smith</td>
+                <td>Jane</td>
+                <td>Femme</td>
+                <td>Oui</td>
+                <td>67890</td>
+                <td>35</td>
+                <td>0987654321</td>
+                <td>Yamoussoukro</td>
+                <td><button class="edit">Modifier</button> <button class="delete">Supprimer</button></td>
+            </tr>
+            <tr>
+                <td>N'Dri</td>
+                <td>Paul</td>
+                <td>Homme</td>
+                <td>Non</td>
+                <td>24680</td>
+                <td>45</td>
+                <td>0345678901</td>
+                <td>Bouaké</td>
+                <td><button class="edit">Modifier</button> <button class="delete">Supprimer</button></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Inclusion du script JavaScript -->
+<script src="script.js"></script>
+</body>
+</html>

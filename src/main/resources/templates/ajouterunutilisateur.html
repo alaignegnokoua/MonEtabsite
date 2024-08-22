@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" th:href="@{style.css}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter un Utilisateur - Mon ETAB</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Lien vers le fichier CSS -->
+</head>
+<body>
+<div class="container">
+    <!-- Barre latérale -->
+    <div class="sidebar">
+        <h1>Mon ETAB</h1>
+        <ul>
+            <li><a th:href="@{eleve}"><i class="fas fa-user"></i> Élèves</a></li>
+            <li><a th:href="@{professeur}"><i class="fas fa-chalkboard-teacher"></i> Professeurs</a></li>
+            <li><a th:href="@{utilisateur}"><i class="fas fa-users"></i> Utilisateurs</a></li>
+            <li><a th:href="@{rapport}"><i class="fas fa-chart-line"></i> Rapport</a></li>
+        </ul>
+        <div class="logout">
+            <a href="#">Déconnexion</a>
+        </div>
+    </div>
+
+    <!-- Contenu principal -->
+    <div class="main-content">
+        <h1>Ajouter un Utilisateur</h1>
+        <form id="ajouterUtilisateurForm">
+            <div class="form-group">
+                <label for="pseudo">Pseudo:</label>
+                <input type="text" id="pseudo" name="pseudo" required>
+            </div>
+            <div class="form-group">
+                <label for="date_creation">Date de création:</label>
+                <input type="date" id="date_creation" name="date_creation" required>
+            </div>
+            <div class="form-group">
+                <label for="role">Rôle:</label>
+                <select id="role" name="role" required>
+                    <option value="admin">Admin</option>
+                    <option value="user2">User2</option>
+                </select>
+            </div>
+            <div class="form-actions">
+                <button type="reset">Annuler</button>
+                <button type="submit">Enregistrer</button>
+            </div>
+        </form>
+
+        <!-- Tableau des utilisateurs existants -->
+        <table>
+            <thead>
+            <tr>
+                <th>Pseudo</th>
+                <th>Date de création</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>admin</td>
+                <td>2024-08-19</td>
+                <td>
+                    <button onclick="modifierUtilisateur('admin')">Modifier</button>
+                    <button onclick="supprimerUtilisateur('admin')">Supprimer</button>
+                </td>
+            </tr>
+            <tr>
+                <td>user2</td>
+                <td>2024-08-19</td>
+                <td>
+                    <button onclick="modifierUtilisateur('user2')">Modifier</button>
+                    <button onclick="supprimerUtilisateur('user2')">Supprimer</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script src="scripts.js"></script> <!-- Lien vers le fichier JavaScript -->
+</body>
+</html>

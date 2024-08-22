@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.w3.org/1999/xhtml">
+>
+<head>
+    <link rel="stylesheet" th:href="@{style.css}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter un Élève - Mon ETAB</title>
+</head>
+
+<body>
+<div class="container">
+    <!-- Barre latérale -->
+    <div class="sidebar">
+        <h1>Mon ETAB</h1>
+        <ul>
+            <li><a th:href="@{eleve}"><i class="fas fa-user"></i> Élèves</a></li>
+            <li><a th:href="@{professeur}"><i class="fas fa-chalkboard-teacher"></i> Professeurs</a></li>
+            <li><a th:href="@{utilisateur}"><i class="fas fa-users"></i> Utilisateurs</a></li>
+            <li><a th:href="@{rapport}"><i class="fas fa-chart-line"></i> Rapport</a></li>
+        </ul>
+        <div class="logout">
+            <a href="#">Déconnexion</a>
+        </div>
+    </div>
+
+    <!-- Contenu principal -->
+    <div class="main-content">
+        <h1>Ajouter un Élève</h1>
+        <form id="ajouterEleveForm">
+            <div class="form-group">
+                <label for="nom">Nom:</label>
+                <input type="text" id="nom" name="nom" required>
+            </div>
+            <div class="form-group">
+                <label for="prenom">Prénom:</label>
+                <input type="text" id="prenom" name="prenom" required>
+            </div>
+            <div class="form-group">
+                <label for="genre">Genre:</label>
+                <select id="genre" name="genre" required>
+                    <option value="Homme">Homme</option>
+                    <option value="Femme">Femme</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="matricule">Matricule:</label>
+                <input type="text" id="matricule" name="matricule" required>
+            </div>
+            <div class="form-group">
+                <label for="date_naissance">Date de naissance:</label>
+                <input type="date" id="date_naissance" name="date_naissance" required>
+            </div>
+            <div class="form-group">
+                <label for="classe">Classe:</label>
+                <select id="classe" name="classe" required>
+                    <option value="6è">6è</option>
+                    <option value="5è">5è</option>
+                    <option value="4è">4è</option>
+                    <option value="3è">3è</option>
+                    <option value="2nde">2nde</option>
+                    <option value="1ère">1ère</option>
+                    <option value="Tle">Tle</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="telephone">Téléphone:</label>
+                <input type="tel" id="telephone" name="telephone" required>
+            </div>
+            <div class="form-group">
+                <label for="ville">Ville:</label>
+                <input type="text" id="ville" name="ville" required>
+            </div>
+            <div class="form-actions">
+                <button type="reset">Annuler</button>
+                <button type="submit">Enregistrer</button>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="scripts.js"></script> <!-- Lien vers le fichier JavaScript -->
+</body>
+</html>

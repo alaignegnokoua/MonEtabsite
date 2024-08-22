@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <link rel="stylesheet" th:href="@{style.css}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Élèves - Mon ETAB</title>
+</head>
+<body>
+
+<div class="container">
+    <!-- Barre latérale -->
+    <div class="sidebar">
+        <h1>Mon ETAB</h1>
+
+        <ul>
+            <li><a th:href="@{eleve}"><i class="fas fa-user"></i> Élèves</a></li>
+            <li><a th:href="@{professeur}"><i class="fas fa-chalkboard-teacher"></i> Professeurs</a></li>
+            <li><a th:href="@{utilisateur}"><i class="fas fa-users"></i> Utilisateurs</a></li>
+            <li><a th:href="@{rapport}"><i class="fas fa-chart-line"></i> Rapport</a></li>
+        </ul>
+        <div class="logout">
+            <a href="#">Déconnexion</a>
+        </div>
+    </div>
+
+    <!-- Contenu principal -->
+    <div class="main-content">
+        <h1>Élèves</h1>
+
+        <!-- Tableau des élèves -->
+        <table class="student-table">
+            <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Genre</th>
+                <th>Classe</th>
+                <th>Matricule</th>
+                <th>Âge</th>
+                <th>Téléphone</th>
+                <th>Ville</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Nom1</td>
+                <td>Prénom1</td>
+                <td>Homme</td>
+                <td>Classe1</td>
+                <td>Mat001</td>
+                <td>18</td>
+                <td>123456789</td>
+                <td>Ville1</td>
+                <td class="actions">
+                    <a href="#">Modifier</a> | <a href="#">Supprimer</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Nom2</td>
+                <td>Prénom2</td>
+                <td>Femme</td>
+                <td>Classe2</td>
+                <td>Mat002</td>
+                <td>19</td>
+                <td>987654321</td>
+                <td>Ville2</td>
+                <td class="actions">
+                    <a href="#">Modifier</a> | <a href="#">Supprimer</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Nom3</td>
+                <td>Prénom3</td>
+                <td>Homme</td>
+                <td>Classe3</td>
+                <td>Mat003</td>
+                <td>20</td>
+                <td>123123123</td>
+                <td>Ville3</td>
+                <td class="actions">
+                    <a href="#">Modifier</a> | <a href="#">Supprimer</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>
+<script th:src="@{srcipt.js}"></script>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" th:href="@{style.css}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modifier un Professeur - Mon ETAB</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- Barre latérale avec les options -->
+<aside class="sidebar">
+    <h2>Mon ETAB</h2>
+    <nav>
+        <ul>
+            <li><a th:href="@{eleve}"><i class="fas fa-user"></i> Élèves</a></li>
+            <li><a th:href="@{professeur}"><i class="fas fa-chalkboard-teacher"></i> Professeurs</a></li>
+            <li><a th:href="@{utilisateur}"><i class="fas fa-users"></i> Utilisateurs</a></li>
+            <li><a th:href="@{rapport}"><i class="fas fa-chart-line"></i> Rapport</a></li>
+        </ul>
+    </nav>
+    <div class="logout">
+        <a href="#">Déconnexion</a>
+    </div>
+</aside>
+
+<!-- Contenu principal -->
+<main>
+    <h1>Modifier un Professeur</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>Pseudo</th>
+            <th>Date de création</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>admin</td>
+            <td>2023-01-01</td>
+            <td>
+                <button onclick="modifierLigne()">Modifier</button>
+                <button onclick="supprimerLigne()">Supprimer</button>
+            </td>
+        </tr>
+        <tr>
+            <td>user2</td>
+            <td>2023-02-01</td>
+            <td>
+                <button onclick="modifierLigne()">Modifier</button>
+                <button onclick="supprimerLigne()">Supprimer</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

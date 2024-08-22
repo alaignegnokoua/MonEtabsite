@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.w3.org/1999/xhtml">
+
+<link rel="stylesheet" th:href="@{style.css}">
+<head th:insert="fragments/fragment::head">
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de bord - Mon ETAB</title>
+    <style>
+        /* Styles globaux */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background-color: #f8f9fa;
+        }
+
+        /* Conteneur principal */
+        .container {
+            display: flex;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 1200px;
+        }
+
+        /* Barre latérale */
+        .sidebar {
+            width: 20%;
+            border-right: 2px solid #bdc3c7;
+            padding-right: 20px;
+        }
+
+        .sidebar h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 20px 0;
+            font-size: 18px;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #3498db;
+            display: flex;
+            align-items: center;
+        }
+
+        .sidebar ul li a i {
+            margin-right: 10px;
+        }
+
+        .sidebar .logout {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        /* Contenu principal */
+        .main-content {
+            width: 80%;
+            padding-left: 30px;
+        }
+
+        /* Titre du tableau de bord */
+        .main-content h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Styles des cartes d'information */
+        .info-cards {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .info-card {
+            background-color: #3498db;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 22%;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-card h2 {
+            margin: 0 0 10px 0;
+            font-size: 24px;
+        }
+
+        .info-card p {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        /* Styles pour le diagramme circulaire */
+        .chart-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .chart-container canvas {
+            width: 50%;
+            max-width: 400px;
+        }
+    </style>
+</head>

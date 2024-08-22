@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" th:href="@{style.css}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapport - Mon ETAB</title>
+
+</head>
+<body>
+<!-- Barre latérale avec les options -->
+<aside class="sidebar">
+    <h2>Mon ETAB</h2>
+    <nav>
+        <ul>
+            <li><a th:href="@{eleve}"><i class="fas fa-user"></i> Élèves</a></li>
+            <li><a th:href="@{professeur}"><i class="fas fa-chalkboard-teacher"></i> Professeurs</a></li>
+            <li><a th:href="@{utilisateur}"><i class="fas fa-users"></i> Utilisateurs</a></li>
+            <li><a th:href="@{rapport}"><i class="fas fa-chart-line"></i> Rapport</a></li>
+        </ul>
+    </nav>
+    <div class="logout">
+        <a href="#">Déconnexion</a>
+    </div>
+</aside>
+
+<!-- Contenu principal -->
+<main>
+    <h1>Rapport</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>Options</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><button onclick="afficherListe('eleves')">Liste des Élèves</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="afficherListe('professeurs')">Liste des Professeurs</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="afficherListe('utilisateurs')">Liste des Utilisateurs</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="genererPDF()">Obtenir au format PDF</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="genererExcel()">Générer au format Excel</button></td>
+        </tr>
+        </tbody>
+    </table>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
